@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page,
+.date-wrapper input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+h1,
+legend,
+footer input {
+  font-family: 'Staatliches', cursive;
+}
+
+body {
+  background: #bfd7e4;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+body::before {
+  content: '';
+  height: 469px;
+  width: 100%;
+  background: #293241;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+header,
+form,
+#red-legend,
+.input-wrapper,
+.fieldset-wrapper,
+.white-bg {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 107px;
+  margin-bottom: 32px;
+
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  line-height: 45px;
+
+  color: #ffffff;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+
+  margin-bottom: 27px;
+}
+
+header img {
+  width: 225px;
+  height: 100px;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:nth-child(1) {
+  padding: 0;
+}
+
+#red-legend,
+legend {
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+}
+
+#red-legend {
+  content: '';
+  height: 135px;
+  width: 100%;
+  background: #f67669;
+  border-radius: 20px 20px 0px 0px;
+  padding-top: 50px;
+
+  align-items: center;
+
+  color: #ffffff;
+}
+
+legend {
+  color: #253b51;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6f0;
+  width: 100%;
+}
+
+#personal-info {
+  padding: 30px 64px;
+
+  background: #ffffff;
+
+  padding-bottom: 32px;
+  margin-top: 0;
+}
+
+.name-wrapper {
+  display: flex;
+  gap: 22px;
+  width: 100%;
+}
+
+.name-wrapper div,
+.time-wrapper .input-wrapper {
+  width: 100%;
+}
+
+input,
+textarea,
+.date-wrapper input {
+  padding-left: 15px;
+  color: #8b898f;
+}
+
+input,
+select,
+textarea {
+  height: 56px;
+  background: #fafafc;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid black;
+}
+
+label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+  margin-bottom: 8px;
+}
+
+label span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #c1bccc;
+
+  margin-left: 10px;
+}
+
+label span:hover {
+  color: #6f6b78;
+}
+
+.fieldset-wrapper {
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.white-bg {
+  background: #ffffff;
+
+  gap: 32px;
+  padding: 0px 64px 64px 64px;
+}
+
+select {
+  width: 50%;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  color: #8b898f;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+textarea {
+  padding-top: 15px;
+  height: 170px;
+}
+
+.checkbox-wrapper {
+  gap: 10px;
+  height: 24px;
+
+  position: relative;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  gap: 8px;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+
+  background: #fafafc;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: left 50% top 50%;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.date-wrapper,
+.time-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#next-date {
+  width: 100%;
+  margin-right: 22px;
+} 
+
+footer {
+  background: #ffffff;
+  border-radius: 0px 0px 20px 20px;
+
+  padding: 0 64px 64px 64px;
+}
+
+footer input {
+  width: 100%;
+
+  background: #f67669;
+  border-radius: 8px;
+  border: none;
+
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #ffffff;
+}
+
+footer input:hover {
+  background: #ec422f;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
